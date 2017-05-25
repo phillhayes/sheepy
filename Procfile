@@ -1,1 +1,1 @@
-web: python sheepy/manage.py runserver 0.0.0.0:$PORT --noreload
+web: sh -c 'cd sheepy && gunicorn sheepy.wsgi:application --env DJANGO_SETTINGS_MODULE='sheepy.settings''
