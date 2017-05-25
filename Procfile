@@ -1,1 +1,1 @@
-web: gunicorn sheepy.wsgi --log-file -
+web: python sheepy/manage.py runserver 0.0.0.0:$PORT --noreload
